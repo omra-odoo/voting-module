@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<odoo>
+
+    <menuitem id="voting_root_menu" name="Voting System">
+        <menuitem id="voter_menu" name="Voter">
+            <menuitem id="voter_list_submenu" action="voter_list_action" />
+        </menuitem>
+
+        <menuitem id="parties_menu" name="Party">
+            <menuitem id="party_list_submenu" action="party_list_action" />
+        </menuitem>
+
+        <menuitem id="candidate_menu" name="Candidate">
+            <menuitem id="candidate_list_submenu" action="candidate_list_action" />
+        </menuitem>
+
+    </menuitem>
+  
+</odoo>
