@@ -6,6 +6,7 @@
         'security/ir.model.access.csv',
         'views/voter_view.xml',
         'views/voting_menu.xml',
+        'views/candidate_view.xml',
         
     ],
     'demo':[

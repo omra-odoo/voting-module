@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="voting_candidate_tree_view" model="ir.ui.view">
+            <field name="name">Voting System</field>
+            <field name="model">candidate.model</field>
+            <field name="arch" type="xml">
+                <tree expand="1" string="voting system">
+                    <field name="name" />
+                    <field name="area" />
+                    <field name="aadharno" />
+                    <field name = "gender"/>
+                    <field name = "dateofbirth"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="candidate_form_view" model="ir.ui.view">
+            <field name="name">Voting system</field>
+            <field name="model">candidate.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name" string="Name"></label>
+                        <h1><field name="name"></field></h1>
+                        <group>
+                            <group>
+                                <field name="gender"/>
+                                <field name="parties"/>
+
+                            </group> 
+                            <group>
+                                <field name="dateofbirth"/>
+                                <field name="area"/>
+                                <field name="aadharno"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

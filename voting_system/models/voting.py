@@ -15,7 +15,6 @@ class votingSystem(models.Model):
     date=fields.Datetime('Date',default=lambda self: fields.Datetime.now(),readonly=True)
     gender=fields.Selection(string="Gender",
         selection=[('male', 'Male'), ('female', 'Female'),('other','Other')])
-    candidate=fields.Selection(string="Select Candidate",
-        selection=[('narendramodi', 'Narendra modi'), ('rahulgandhi', 'Rahul Gandhi'),('arvindkejriwal','Arvind Kejriwal')])
+    candidate=fields.Many2one("candidate.model",string="Select Candidate",)
     parties=fields.Selection(string="Select Party Name",
         selection=[('bjp', 'Bjp'), ('congress', 'Congress'),('aap','AAP')])

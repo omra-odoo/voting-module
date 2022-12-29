@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 voting_system.access_voter_model,access_voter_model,voting_system.model_voter_model,base.group_user,1,1,1,1
+voting_system.access_candidate_model,access_candidate_model,voting_system.model_candidate_model,base.group_user,1,1,1,1

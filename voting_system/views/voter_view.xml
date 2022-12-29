@@ -13,7 +13,7 @@
         </record>
         <record id="candidate_list_action" model="ir.actions.act_window">
             <field name="name">Candidates</field>
-            <field name="res_model">voter.model</field>
+            <field name="res_model">candidate.model</field>
             <field name="view_mode">list,form</field>
         </record>
 
@@ -53,7 +53,19 @@
                         </group>
 
                         <notebook>
-                            
+                            <page string="Verification Details">
+                                <group>
+                                    <field name="adharno" />
+                                    <field name="voterid" />
+                                    <field name="pancard" />
+                                </group>
+                            </page>
+                            <page string="Vote For">
+                                <group>
+                                <field name="candidate"/>
+                                <field name="parties"/>
+                                </group>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>
