@@ -8,7 +8,7 @@
         </record>
         <record id="party_list_action" model="ir.actions.act_window">
             <field name="name">Parties</field>
-            <field name="res_model">voter.model</field>
+            <field name="res_model">voting.party.model</field>
             <field name="view_mode">list,form</field>
         </record>
         <record id="candidate_list_action" model="ir.actions.act_window">
@@ -24,7 +24,7 @@
                 <tree expand="1" string="voting system">
                     <field name="name" />
                     <field name="address" />
-                    <field name="age"/>
+                    <field name="dateofbirth"/>
                     <field name="adharno" />
                     <field name = "gender"/>
                     <field name = "voterid"/>
@@ -44,11 +44,12 @@
                         <h1><field name="name"></field></h1>
                         <group>
                             <group>
-                                <field name="age"/>
-                                <field name="gender"/>
+                                <field name="dateofbirth"/>
+                                <field name="gender"/>   
                             </group>
                             <group>
                                 <field name="address"/>
+                                <field name="date"/>
                             </group>
                         </group>
 

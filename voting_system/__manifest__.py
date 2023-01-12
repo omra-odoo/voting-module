@@ -7,6 +7,7 @@
         'views/voter_view.xml',
         'views/voting_menu.xml',
         'views/candidate_view.xml',
+        'views/party_view.xml',
         
     ],
     'demo':[

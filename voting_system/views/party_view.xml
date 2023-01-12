@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="voting_party_tree_view" model="ir.ui.view">
+            <field name="name">Voting System</field>
+            <field name="model">voting.party.model</field>
+            <field name="arch" type="xml">
+                <tree expand="1" string="voting system">
+                    <field name="name" />
+                    <field name="leadearname"/>
+                    <field name="members"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="Party_form_view" model="ir.ui.view">
+            <field name="name">Voting system</field>
+            <field name="model">voting.party.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name" string="Name"></label>
+                        <h1><field name="name"></field></h1>
+                        <group>
+                           <field name="leadearname"/>
+                           <field name="members"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

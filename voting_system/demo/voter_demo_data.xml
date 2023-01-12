@@ -3,9 +3,9 @@
 <odoo>
         <record model="voter.model" id="voter_demo_data1">
             <field name="name">Om Rabara</field>
-            <field name="address">Lives in bhayavadar,rajkot,gujarat.</field>
+            <field name="address">bhayavadar,rajkot,gujarat.</field>
             <field name="age">19</field>
-            <field name="adharno">111122223333</field>
+            <field name="adharno">1111222233334444</field>
             <field name = "gender">male</field>
             <field name = "voterid">True</field>
             <!-- <field name = "pancard" optional = 'hide'/> -->
@@ -13,5 +13,9 @@
 
         <record model="candidate.model" id="candidate_demo_data">
             <field name="name">Om Rabara</field>
+        </record>
+
+        <record model="voting.party.model" id="party_demo_data">
+            <field name="name">demo party</field>
         </record>
 </odoo>
