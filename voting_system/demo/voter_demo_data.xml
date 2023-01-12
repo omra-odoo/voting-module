@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-        <record model="voter.model" id="voter_demo_data1">
-            <field name="name">Om Rabara</field>
-            <field name="address">bhayavadar,rajkot,gujarat.</field>
-            <field name="age">19</field>
-            <field name="adharno">1111222233334444</field>
-            <field name = "gender">male</field>
-            <field name = "voterid">True</field>
-            <!-- <field name = "pancard" optional = 'hide'/> -->
-        </record>
-
         <record model="candidate.model" id="candidate_demo_data">
             <field name="name">Om Rabara</field>
+        </record>
+        <record model="candidate.model" id="candidate_demo_data1">
+            <field name="name">Narendra Modi</field>
+        </record>
+        <record model="candidate.model" id="candidate_demo_data2">
+            <field name="name">Rahul Gandhi</field>
+        </record>
+        <record model="candidate.model" id="candidate_demo_data3">
+            <field name="name">Arvind Kejriwal</field>
         </record>
 
         <record model="voting.party.model" id="party_demo_data">
             <field name="name">demo party</field>
+        </record>
+        <record model="voting.party.model" id="party_demo_data1">
+            <field name="name">BJP</field>
+        </record>
+        <record model="voting.party.model" id="party_demo_data2">
+            <field name="name">CONGRESS</field>
+        </record>
+        <record model="voting.party.model" id="party_demo_data3">
+            <field name="name">AAP</field>
+        </record>
+
+        <record model="voter.model" id="voter_demo_data1">
+            <field name="name">Om Rabara</field>
+            <field name="address">bhayavadar,rajkot,gujarat.</field>
+            <!-- <field name="age">19</field> -->
+            <field name="adharno">1111222233334444</field>
+            <field name = "gender">male</field>
+            <field name = "voterid">True</field>
+            <field name="dateofbirth">1990-12-12</field>
+            <field name="parties_id"> 5</field>
+            <field name="candidate_id"> 6</field>
+            <!-- <field name = "pancard" optional = 'hide'/> -->
         </record>
 </odoo>

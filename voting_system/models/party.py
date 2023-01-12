@@ -7,3 +7,5 @@ class party(models.Model):
     name=fields.Char('Party Name:')
     leadearname = fields.Char('Parties Leader Name:')
     members=fields.Integer('Total Membbers:')
+    image = fields.Binary("Party Logo:", attachment=True, store=True,
+                                help="This field holds the image used for as party icon")

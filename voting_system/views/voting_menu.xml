@@ -2,7 +2,7 @@
 
 <odoo>
 
-    <menuitem id="voting_root_menu" name="Voting System">
+    <menuitem id="voting_root_menu" name="Voting System" web_icon="voting_system,static/description/vote.png">
         <menuitem id="voter_menu" name="Voter">
             <menuitem id="voter_list_submenu" action="voter_list_action" />
         </menuitem>
