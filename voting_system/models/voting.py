@@ -18,7 +18,7 @@ class votingSystem(models.Model):
     gender=fields.Selection(string="Gender",
         selection=[('male', 'Male'), ('female', 'Female'),('other','Other')])
     candidate_id=fields.Many2one("candidate.model",string="Select Candidate",required=True)
-    parties_id=fields.Many2one("voting.party.model", string="Select Party", required=True)
+    parties_id=fields.Many2one("voting.party.model", string="Select Party", related='candidate_id.party_id', required=True)
     dateofbirth=fields.Date('Date Of Birth',required = True)
     
     # def _compute_length_adharno(self):

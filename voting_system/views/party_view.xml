@@ -6,7 +6,7 @@
             <field name="name">Voting System</field>
             <field name="model">voting.party.model</field>
             <field name="arch" type="xml">
-                <tree expand="1" string="voting system">
+                <tree expand="1" string="voting system" >
                     <field name="name" />  
                      <!-- widget="image" class="oe_right oe_avatar"-->
                     <field name="leadearname"/>
@@ -21,7 +21,7 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                         <field name="image" widget='image'  class="oe_avatar bg-white" nolabel="1"/>
+                         <field name="image_small" widget='image'  class="oe_avatar bg-white" nolabel="1"/>
                         <label for="name" string="Name"></label>
                         <h1><field name="name"></field></h1>
                         <group>

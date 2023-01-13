@@ -64,7 +64,7 @@
                             <page string="Vote For">
                                 <group>
                                 <field name="candidate_id"/>
-                                <field name="parties_id"/>
+                                <field name="parties_id" />
                                 </group>
                             </page>
                         </notebook>

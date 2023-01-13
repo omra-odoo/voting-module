@@ -38,5 +38,5 @@
             <field name="parties_id"> 5</field>
             <field name="candidate_id"> 6</field>
             <!-- <field name = "pancard" optional = 'hide'/> -->
-        </record>
-</odoo>
+        </record> 
+ </odoo>   
