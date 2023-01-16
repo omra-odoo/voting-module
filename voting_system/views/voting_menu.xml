@@ -15,6 +15,9 @@
             <menuitem id="candidate_list_submenu" action="candidate_list_action" />
         </menuitem>
 
+        <menuitem id="result_menu" name="Result" action="result_menu_action" />
+       
+
     </menuitem>
-  
+
 </odoo>

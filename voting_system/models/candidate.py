@@ -16,7 +16,7 @@ class candidates(models.Model):
         selection=[('male', 'Male'), ('female', 'Female'),('other','Other')])
     party_id=fields.Many2one("voting.party.model", string="Select Party")
     aadharno=fields.Char('Aadharcard Number')
-
+    phoneno=fields.Integer('Phone Number')
 
     @api.constrains('aadharno')
     def _check_valid_aadharno(self):
