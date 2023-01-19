@@ -31,12 +31,12 @@
             <field name="name">Om Rabara</field>
             <field name="address">bhayavadar,rajkot,gujarat.</field>
             <!-- <field name="age">19</field> -->
-            <field name="adharno">1111222233334444</field>
+            <field name="adharno">123456789098</field>
             <field name = "gender">male</field>
             <field name = "voterid">True</field>
             <field name="dateofbirth">1990-12-12</field>
-            <field name="parties_id"> 5</field>
-            <field name="candidate_id"> 6</field>
+            <field name="parties_id" ref="voting_system.party_demo_data1"></field>
+            <field name="candidate_id" ref="voting_system.candidate_demo_data1"></field>
             <!-- <field name = "pancard" optional = 'hide'/> -->
         </record> 
  </odoo>   

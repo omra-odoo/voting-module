@@ -23,7 +23,7 @@ class candidates(models.Model):
         # length = len(self.adharno)
         for record in self:
             s = len(record.aadharno)
-            if  s != 16:
+            if  s != 12:
                 raise ValidationError(("your adhar number is not valid"))
 
 

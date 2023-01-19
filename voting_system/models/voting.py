@@ -20,7 +20,12 @@ class votingSystem(models.Model):
     candidate_id=fields.Many2one("candidate.model",string="Select Candidate",required=True)
     parties_id=fields.Many2one("voting.party.model", string="Select Party", related='candidate_id.party_id', required=True)
     dateofbirth=fields.Date('Date Of Birth',required = True)
-    
+    state = fields.Selection(selection= [('new','New'),('done','Done')],default="new")
+
+    _sql_constraints = [
+        ("check_adharno", "UNIQUE(adharno)", "The adharno is unvalid"), 
+        ("check_name", "UNIQUE(name)", "The name must be unique"),
+    ]
     # def _compute_length_adharno(self):
     #     for record in self:
     #         record.adharlencount = len(record.adharno)
@@ -37,7 +42,7 @@ class votingSystem(models.Model):
         # length = len(self.adharno)
         for record in self:
             s = len(record.adharno)
-            if  s != 16:
+            if  s != 12:
                 raise ValidationError(("your adhar number is not valid"))
    
     @api.constrains('dateofbirth')
@@ -45,10 +50,14 @@ class votingSystem(models.Model):
      # Get the current date
         now = datetime.datetime.utcnow()
         now = now.date()
-
     # Get the difference between the current date and the birthday
-    
         age1 = dateutil.relativedelta.relativedelta(now, self.dateofbirth)
         age1 = age1.years
         if age1 <= 18 :
             raise ValidationError(("You are not eligible for voting"))
+
+    def submit_action(self):
+        for record in self:
+            if record.state=='new':
+                record.state='done'
+            

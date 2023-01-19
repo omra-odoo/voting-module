@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="voting_result_tree_view" model="ir.ui.view">
+            <field name="name">Result</field>
+            <field name="model">voting.result.model</field>
+            <field name="arch" type="xml">
+                <tree expand="1">
+                    <field name="result" />   
+                </tree>
+            </field>
+        </record>
+
+        <record id="result_search_view" model="ir.ui.view">
+            <field name="name">voting system</field>
+            <field name="model">voting.result.model</field>
+            <field name="arch" type="xml">
+                <search string="Voting System">
+                <group string= "Group By"> 
+                    <filter name='result' string='Result'/>
+                </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

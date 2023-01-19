@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <tree expand="1" string="voting system">
                     <field name="name" />
+                    <field name="party_id"/>
                     <field name="area" />
                     <field name="aadharno" />
                     <field name = "gender"/>

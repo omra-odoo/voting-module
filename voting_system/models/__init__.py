@@ -1,1 +1,1 @@
-from . import voting,candidate,party
+from . import voting,candidate,party,result
