@@ -7,7 +7,7 @@ class party(models.Model):
 
     name=fields.Char('Party Name:')
     leadearname = fields.Char('Parties Leader Name:')
-    members=fields.Integer('Total Membbers:' ,compute="_count_members")
+    members=fields.Integer('Total Membbers:' ,compute="_count_members" )
     image_small = fields.Binary("Party Logo:", attachment=True, store=True)
 
     candidate_id = fields.One2many('candidate.model', 'party_id')

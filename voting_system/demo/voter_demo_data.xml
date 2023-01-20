@@ -31,7 +31,7 @@
             <field name="name">Om Rabara</field>
             <field name="address">bhayavadar,rajkot,gujarat.</field>
             <!-- <field name="age">19</field> -->
-            <field name="adharno">123456789098</field>
+            <field name="adharno">888888888888</field>
             <field name = "gender">male</field>
             <field name = "voterid">True</field>
             <field name="dateofbirth">1990-12-12</field>

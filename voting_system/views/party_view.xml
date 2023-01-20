@@ -15,6 +15,30 @@
             </field>
         </record>
 
+         <record id="party_search_view" model="ir.ui.view">
+            <field name="name">voting system</field>
+            <field name="model">voting.party.model</field>
+            <field name="arch" type="xml">
+                <search string="Voting System">
+                    <group string= "Group By">
+                        <filter name='members' string='Members' context="{'group_by':'members'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_graph" model="ir.ui.view">
+            <field name="name">party.graph</field>
+            <field name="model">voting.party.model</field>
+            <field name="arch" type="xml">
+                <graph string="Result">
+                    <field name ="name"/>
+                    <field name="members"/>
+                </graph>
+            </field>
+        </record>
+
+
         <record id="Party_form_view" model="ir.ui.view">
             <field name="name">Voting system</field>
             <field name="model">voting.party.model</field>

@@ -17,6 +17,7 @@
             </field>
         </record>
 
+
         <record id="candidate_form_view" model="ir.ui.view">
             <field name="name">Voting system</field>
             <field name="model">candidate.model</field>

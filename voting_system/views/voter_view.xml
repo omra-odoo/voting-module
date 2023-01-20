@@ -5,12 +5,12 @@
             <field name="name">Voters</field>
             <field name="res_model">voter.model</field>
             <!-- <field name="context">{'search_default_candidate_id':1}</field> -->
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">list,form,graph</field>
         </record>
         <record id="party_list_action" model="ir.actions.act_window">
             <field name="name">Parties</field>
             <field name="res_model">voting.party.model</field>
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">list,form,graph</field>
         </record>
         <record id="candidate_list_action" model="ir.actions.act_window">
             <field name="name">Candidates</field>
@@ -45,24 +45,40 @@
             <field name="model">voter.model</field>
             <field name="arch" type="xml">
                 <search string="Voting System">
+                    <field name="date"/>
+                    <field name="gender"/>
+                    <field name="parties_id"/>
+                    <field name="candidate_id"/>
                     <filter string="Successful Votes" name="successfull" domain="[('state', '=', 'done')]"/>
-                <group string= "Group By"> 
-                    <filter name='candidate_id' string='Candidate' context="{'group_by':'candidate_id'}"/>
-                    <!-- <filter name='garden' string='Garden' context="{'group_by':'garden'}"/> -->
-                </group>
+                    <group string= "Group By">
+                        <filter name='candidate_id' string='Candidate' context="{'group_by':'candidate_id'}"/>
+                        <!-- <filter name='garden' string='Garden' context="{'group_by':'garden'}"/> -->
+                    </group>
                 </search>
             </field>
         </record>
 
+        <record id="view_graph" model="ir.ui.view">
+            <field name="name">voter.party.graph</field>
+            <field name="model">voter.model</field>
+            <field name="arch" type="xml">
+                <graph string="Result">
+                    <field name ="name"/>
+                    <field name="candidate_id"/>
+                </graph>
+            </field>
+        </record>
+
+        
         <record id="voter_form_view" model="ir.ui.view">
             <field name="name">Voting system</field>
             <field name="model">voter.model</field>
             <field name="arch" type="xml">
                 <form>
-                <header>
-                    <button name="submit_action" type="object" string="Submit"/>
-                    <field name="state" widget="statusbar"></field>
-                </header>
+                    <header>
+                        <button name="submit_action" type="object" string="Submit"/>
+                        <field name="state" widget="statusbar"></field>
+                    </header>
                     <sheet>
                         <widget name="web_ribbon" title="Successful" bg_color="bg-success" attrs="{'invisible': [('state', 'not in', ('done'))]}"/>
                         <label for="name" string="Name"></label>
