@@ -8,6 +8,8 @@ import dateutil
 class votingSystem(models.Model):
     _name="voter.model"
     _description="voting model"
+    _inherit = ["mail.thread","mail.activity.mixin"]
+
 
     name=fields.Char('Name', required=True)
     address=fields.Text('Address')
@@ -20,7 +22,7 @@ class votingSystem(models.Model):
     candidate_id=fields.Many2one("candidate.model",string="Select Candidate",required=True)
     parties_id=fields.Many2one("voting.party.model", string="Select Party", related='candidate_id.party_id', required=True)
     dateofbirth=fields.Date('Date Of Birth',required = True)
-    state = fields.Selection(selection= [('new','New'),('done','Done')],default="new")
+    state = fields.Selection(selection= [('new','New'),('done','Done')],default="new",tracking=True)
 
     _sql_constraints = [
         ("check_adharno", "UNIQUE(adharno)", "The adharno is unvalid"), 

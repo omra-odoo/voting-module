@@ -11,6 +11,7 @@
         'views/result_view.xml',
         
     ],
+    'depends': ['mail','base'],
     'demo':[
         'demo/voter_demo_data.xml',
     ],
