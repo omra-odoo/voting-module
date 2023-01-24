@@ -17,6 +17,15 @@ class candidates(models.Model):
     party_id=fields.Many2one("voting.party.model", string="Select Party")
     aadharno=fields.Char('Aadharcard Number')
     phoneno=fields.Integer('Phone Number')
+    result_ids= fields.One2many('voter.model', 'candidate_id')
+    vote_count= fields.Integer("Total Votes",compute="_count_votes")
+
+    def _count_votes(self):
+        for rec in self:
+            rec.vote_count = len(rec.result_ids)
+        # print (rec.vote_count)
+
+
 
     @api.constrains('aadharno')
     def _check_valid_aadharno(self):
