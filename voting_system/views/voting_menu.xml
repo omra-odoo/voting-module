@@ -15,7 +15,7 @@
             <menuitem id="candidate_list_submenu" action="candidate_list_action" />
         </menuitem>
 
-        <menuitem id="result_menu" name="Result" action="result_menu_action" >
+        <menuitem id="area_menu" name="Area" action="area_menu_action" >
         </menuitem>
 
     </menuitem>

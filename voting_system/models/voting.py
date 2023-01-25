@@ -19,11 +19,12 @@ class votingSystem(models.Model):
     date=fields.Datetime('Date',default=lambda self: fields.Datetime.now(),readonly=True)
     gender=fields.Selection(string="Gender",
         selection=[('male', 'Male'), ('female', 'Female'),('other','Other')])
-    candidate_id=fields.Many2one("candidate.model",string="Select Candidate",required=True)
+    area_id = fields.Many2one("area.model", string="Select Area")
+    candidate_id=fields.Many2one("candidate.model",string="Select Candidate",domain="[('area_candidate_id','=', area_id)]", required=True)
     parties_id=fields.Many2one("voting.party.model", string="Select Party", related='candidate_id.party_id', required=True)
     dateofbirth=fields.Date('Date Of Birth',required = True)
     state = fields.Selection(selection= [('new','New'),('done','Done')],default="new",tracking=True)
-
+    
     _sql_constraints = [
         ("check_adharno", "UNIQUE(adharno)", "The adharno is unvalid"), 
         ("check_name", "UNIQUE(name)", "The name must be unique"),

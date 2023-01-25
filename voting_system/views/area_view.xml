@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="voting_area_tree_view" model="ir.ui.view">
+            <field name="name">voting.area</field>
+            <field name="model">area.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />  
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -10,7 +10,7 @@ class candidates(models.Model):
     _description = "this is for candidate model"
 
     name=fields.Char('Candidate Name:')
-    area=fields.Text('Area')
+    area_candidate_id = fields.Many2one("area.model", string="Select Area")
     dateofbirth=fields.Date('Date Of Birth')
     gender=fields.Selection(string="Gender",
         selection=[('male', 'Male'), ('female', 'Female'),('other','Other')])

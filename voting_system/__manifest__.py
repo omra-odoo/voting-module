@@ -8,7 +8,7 @@
         'views/voting_menu.xml',
         'views/candidate_view.xml',
         'views/party_view.xml',
-        # 'views/result_view.xml',
+        'views/area_view.xml',
         
     ],
     'depends': ['mail','base'],
