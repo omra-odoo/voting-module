@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_voter_model">
+        <t t-foreach="docs" t-as="voter">
+            <t t-call="web.html_container">
+                <div class="page" >
+                    <div>
+                        <h1>
+                            <strong>Name: </strong>
+                            <span t-field="voter.name"/>
+                            <strong>DOB: </strong>
+                            <span t-field="voter.dateofbirth"/>
+                            <strong>Address: </strong>
+                            <span t-field="voter.address"/>
+                            <strong>Date: </strong>
+                            <span t-field="voter.date"/>
+                            <strong>Gender: </strong>
+                            <span t-field="voter.gender"/>
+                            <strong>Area: </strong>
+                            <span t-field="voter.area_id"/>
+                            <strong>aadharno: </strong>
+                            <span t-field="voter.adharno"/>
+                            <strong>Voter id: </strong>
+                            <span t-field="voter.voterid"/>
+                            <strong>Pan Card: </strong>
+                            <span t-field="voter.pancard"/>
+                            <strong>Candidate you have voted: </strong>
+                            <span t-field="voter.candidate_id"/>
+                        </h1>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

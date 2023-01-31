@@ -1,0 +1,11 @@
+<odoo>
+    <record id="voter_model_report_action" model="ir.actions.report">
+        <field name="name">your details</field>
+        <field name="model">voter.model</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">voting_system.report_voter_model</field>
+        <field name="report_file">voting_system.report_voter_model</field>
+        <field name="binding_model_id" ref="model_voter_model"/>
+        <field name="binding_type">report</field>  
+    </record>
+</odoo>

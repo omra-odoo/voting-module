@@ -11,11 +11,11 @@
             <menuitem id="party_list_submenu" action="party_list_action" />
         </menuitem>
 
-        <menuitem id="candidate_menu" name="Candidate">
+        <menuitem id="candidate_menu" groups="voting_system.voting_group_candidate" name="Candidate">
             <menuitem id="candidate_list_submenu" action="candidate_list_action" />
         </menuitem>
 
-        <menuitem id="area_menu" name="Area" action="area_menu_action" >
+        <menuitem id="area_menu" name="Area"  groups="voting_system.voting_group_admin" action="area_menu_action"  >
         </menuitem>
 
     </menuitem>
