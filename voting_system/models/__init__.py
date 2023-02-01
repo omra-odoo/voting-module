@@ -1,1 +1,1 @@
-from . import voting,candidate,party,area
+from . import voting,candidate,party,area,controllers

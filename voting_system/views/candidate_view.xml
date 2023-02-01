@@ -13,7 +13,7 @@
                     <field name="aadharno" />
                     <field name = "gender"/>
                     <field name = "dateofbirth"/>
-                    <field name = "vote_count" />
+                    <field name = "vote_count" groups="voting_system.voting_group_admin" />
                 </tree>
             </field>
         </record>
